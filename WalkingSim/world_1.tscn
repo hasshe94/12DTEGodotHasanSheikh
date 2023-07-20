@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnonwjdtene32"]
+
+[ext_resource type="PackedScene" uid="uid://dlywqshtb2a61" path="res://leveltest1.tscn" id="1_55p5w"]
+[ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_waovq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_5x4mg"]
+sky_material = SubResource("ProceduralSkyMaterial_waovq")
+
+[sub_resource type="Environment" id="Environment_xcrvv"]
+background_mode = 2
+sky = SubResource("Sky_5x4mg")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World1" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xcrvv")
+
+[node name="dungeon" parent="." instance=ExtResource("1_55p5w")]
+
+[node name="Player1" parent="." instance=ExtResource("2_3tynf")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.67968, 0.334777)
+
+[editable path="dungeon"]
