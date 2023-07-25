@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=15 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="PackedScene" uid="uid://dlywqshtb2a61" path="res://leveltest1.tscn" id="1_55p5w"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
 [ext_resource type="Texture2D" uid="uid://n4pfrgf5v7ft" path="res://Stones & Brick Textures/Brickwall2_Texture.png" id="2_8okmw"]
-[ext_resource type="Texture2D" uid="uid://5y6veivsygds" path="res://Stones & Brick Textures/Stones_Texture.png" id="3_nkdsi"]
 [ext_resource type="PackedScene" uid="uid://d02oow6saxkue" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe Valve.blend" id="5_cljd7"]
 [ext_resource type="PackedScene" uid="uid://1815g2un3sit" path="res://pickup.tscn" id="7_6pqgx"]
 [ext_resource type="Texture2D" uid="uid://dkctif8h4ky8u" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe-Texture.png" id="7_67gts"]
@@ -24,7 +23,7 @@ ambient_light_energy = 0.0
 tonemap_mode = 2
 glow_enabled = true
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0685
+volumetric_fog_density = 0.0159
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76q2r"]
 albedo_texture = ExtResource("2_8okmw")
@@ -32,12 +31,12 @@ uv1_scale = Vector3(60, 60, 60)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_132np"]
 albedo_texture = ExtResource("2_8okmw")
-uv1_scale = Vector3(20, 20, 20)
+uv1_scale = Vector3(25, 25, 25)
 uv2_scale = Vector3(20, 20, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_badg7"]
-albedo_texture = ExtResource("3_nkdsi")
-uv1_scale = Vector3(10, 0, 0)
+albedo_texture = ExtResource("2_8okmw")
+uv1_scale = Vector3(15, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dr1qd"]
 albedo_texture = ExtResource("7_67gts")
@@ -57,10 +56,11 @@ environment = SubResource("Environment_p1vgl")
 material_override = SubResource("StandardMaterial3D_76q2r")
 
 [node name="Cube" parent="dungeon" index="1"]
+transform = Transform3D(2.78253, 0, 0, 0, 1.98676, 0, 0, 0, 2.78253, 1.30623, 0, -1.11192)
 material_override = SubResource("StandardMaterial3D_132np")
 
 [node name="Plane" parent="dungeon" index="2"]
-transform = Transform3D(2.93136, 0, 0, 0, 2.91355, 0, 0, 0, 2.8336, 1.27617, 1.92308, 5.48338)
+transform = Transform3D(2.93136, 0, 0, 0, -2.9119, -0.0952831, 0, 0.0979714, -2.832, 1.27617, 1.82566, -1.15296)
 material_override = SubResource("StandardMaterial3D_badg7")
 
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]

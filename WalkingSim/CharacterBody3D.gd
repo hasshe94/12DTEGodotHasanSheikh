@@ -38,7 +38,8 @@ func _unhandled_input(event):
 
 func check_ray_hit():
 	if ray.is_colliding():
-		if ray.get_collider().is_in_group("Pickup"):
+		var collider = ray.get_collider()
+		if collider and ray.get_collider().is_in_group("Pickup"):
 			interaction_notifier.visible = true
 		if Input.is_action_just_pressed("use"):
 			ray.get_collider().queue_free()
@@ -48,7 +49,7 @@ func check_ray_hit():
 		interaction_notifier.visible = false
 
 func _physics_process(delta):
-	
+	check_ray_hit()
 	if Input.is_action_pressed("run"):
 		SPEED = run_speed
 	else:
