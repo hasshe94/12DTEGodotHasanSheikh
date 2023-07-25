@@ -1,33 +1,59 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=11 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="PackedScene" uid="uid://dlywqshtb2a61" path="res://leveltest1.tscn" id="1_55p5w"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
+[ext_resource type="Texture2D" uid="uid://n4pfrgf5v7ft" path="res://Stones & Brick Textures/Brickwall2_Texture.png" id="2_8okmw"]
+[ext_resource type="Texture2D" uid="uid://5y6veivsygds" path="res://Stones & Brick Textures/Stones_Texture.png" id="3_nkdsi"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_waovq"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xo5ff"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_energy_multiplier = 0.0
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_5x4mg"]
-sky_material = SubResource("ProceduralSkyMaterial_waovq")
+[sub_resource type="Sky" id="Sky_lhbnn"]
+sky_material = SubResource("ProceduralSkyMaterial_xo5ff")
 
-[sub_resource type="Environment" id="Environment_xcrvv"]
-background_mode = 2
-sky = SubResource("Sky_5x4mg")
+[sub_resource type="Environment" id="Environment_p1vgl"]
+background_mode = 1
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_lhbnn")
+ambient_light_energy = 0.0
 tonemap_mode = 2
 glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0685
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76q2r"]
+albedo_texture = ExtResource("2_8okmw")
+uv1_scale = Vector3(60, 60, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_132np"]
+albedo_texture = ExtResource("2_8okmw")
+uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_badg7"]
+albedo_texture = ExtResource("3_nkdsi")
+uv1_scale = Vector3(10, 0, 0)
 
 [node name="World1" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_xcrvv")
+environment = SubResource("Environment_p1vgl")
 
 [node name="dungeon" parent="." instance=ExtResource("1_55p5w")]
 
+[node name="Dungeon" parent="dungeon" index="0"]
+material_override = SubResource("StandardMaterial3D_76q2r")
+
+[node name="Cube" parent="dungeon" index="1"]
+material_override = SubResource("StandardMaterial3D_132np")
+
+[node name="Plane" parent="dungeon" index="2"]
+transform = Transform3D(2.93136, 0, 0, 0, 2.91355, 0, 0, 0, 2.8336, 1.27617, 1.92308, 5.48338)
+material_override = SubResource("StandardMaterial3D_badg7")
+
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.67968, 0.334777)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.168525, 0.67968, 1.43886)
+FRICTION = 0.05
 
 [editable path="dungeon"]
