@@ -7,17 +7,45 @@ var SPEED = 5.0
 @export var FRICTION = 0.01
 const JUMP_VELOCITY = 2
 
+var pages_collected = 0
+
+
+@onready var ray = $Camera3D/RayCast3D
+@onready var interaction_notifier = $Control/InteractionNotifier
+@onready var collection_tracker = $Control/MarginContainer/CollectionTracker
+
+
+
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+
+
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x, -1.2, 1.2)
+
+
+
+
+
+func check_ray_hit():
+	if ray.is_colliding():
+		if ray.get_collider().is_in_group("Pickup"):
+			interaction_notifier.visible = true
+		if Input.is_action_just_pressed("use"):
+			ray.get_collider().queue_free()
+			pages_collected += 1
+			collection_tracker.text = "Pages : " + str(pages_collected) + " /10"
+	else:
+		interaction_notifier.visible = false
 
 func _physics_process(delta):
 	

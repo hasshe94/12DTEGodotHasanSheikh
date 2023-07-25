@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=16 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="PackedScene" uid="uid://dlywqshtb2a61" path="res://leveltest1.tscn" id="1_55p5w"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
 [ext_resource type="Texture2D" uid="uid://n4pfrgf5v7ft" path="res://Stones & Brick Textures/Brickwall2_Texture.png" id="2_8okmw"]
 [ext_resource type="Texture2D" uid="uid://5y6veivsygds" path="res://Stones & Brick Textures/Stones_Texture.png" id="3_nkdsi"]
+[ext_resource type="PackedScene" uid="uid://d02oow6saxkue" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe Valve.blend" id="5_cljd7"]
+[ext_resource type="PackedScene" uid="uid://1815g2un3sit" path="res://pickup.tscn" id="7_6pqgx"]
+[ext_resource type="Texture2D" uid="uid://dkctif8h4ky8u" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe-Texture.png" id="7_67gts"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xo5ff"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,10 +33,18 @@ uv1_scale = Vector3(60, 60, 60)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_132np"]
 albedo_texture = ExtResource("2_8okmw")
 uv1_scale = Vector3(20, 20, 20)
+uv2_scale = Vector3(20, 20, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_badg7"]
 albedo_texture = ExtResource("3_nkdsi")
 uv1_scale = Vector3(10, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dr1qd"]
+albedo_texture = ExtResource("7_67gts")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pp8f"]
+albedo_texture = ExtResource("7_67gts")
+uv1_scale = Vector3(1.75, 1.75, 1.75)
 
 [node name="World1" type="Node3D"]
 
@@ -53,7 +64,24 @@ transform = Transform3D(2.93136, 0, 0, 0, 2.91355, 0, 0, 0, 2.8336, 1.27617, 1.9
 material_override = SubResource("StandardMaterial3D_badg7")
 
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.168525, 0.67968, 1.43886)
+transform = Transform3D(0.0217399, 0, -0.499527, 0, 0.5, 0, 0.499527, 0, 0.0217399, 0.168525, 0.67968, 1.43886)
 FRICTION = 0.05
 
+[node name="Pipe Valve" parent="." instance=ExtResource("5_cljd7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44789, 0.495019, 0.200943)
+
+[node name="Valve" parent="Pipe Valve" index="0"]
+transform = Transform3D(0.846007, 0, -0.533172, -0.533172, 0, -0.846007, 0, 1, 0, 0, 0, 0)
+
+[node name="Valve Handle" parent="Pipe Valve/Valve" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dr1qd")
+
+[node name="Valve Pipe" parent="Pipe Valve/Valve" index="1"]
+transform = Transform3D(-0.538568, 0.840776, -0.0551499, -0.0162819, -0.0758259, -0.996989, -0.842426, -0.536048, 0.0545268, -0.139563, 0.332423, 0.372669)
+surface_material_override/0 = SubResource("StandardMaterial3D_1pp8f")
+
+[node name="Pickup" parent="." instance=ExtResource("7_6pqgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+
 [editable path="dungeon"]
+[editable path="Pipe Valve"]
