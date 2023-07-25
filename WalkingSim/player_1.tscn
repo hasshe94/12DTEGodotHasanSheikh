@@ -28,7 +28,7 @@ spot_range = 2.71652
 spot_angle = 10.8719
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0826296, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011289, 0)
 target_position = Vector3(0, 0, -1.5)
 collide_with_areas = true
 collide_with_bodies = false
