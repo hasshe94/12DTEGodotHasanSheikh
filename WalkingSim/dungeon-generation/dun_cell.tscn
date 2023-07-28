@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d22ggm8kupbws"]
+
+[ext_resource type="Script" path="res://dungeon-generation/DunCell.gd" id="1_uuklk"]
+
+[node name="DunCell" type="Node3D"]
+script = ExtResource("1_uuklk")
