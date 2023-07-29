@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7f7g0yyj46au"
-path.s3tc="res://.godot/imported/Brick_Texture.png-652a0218d0626a2c1325710f6636c56c.s3tc.ctex"
+uid="uid://cvewhq4x36jhm"
+path.s3tc="res://.godot/imported/DunCell_TexturesCom_Pavement_CobblestoneStreet5_2x2_1K_albedo.png-ee8625b55602bb995c1f0b1ce04d6e33.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Stones & Brick Textures/Brick_Texture.png"
-dest_files=["res://.godot/imported/Brick_Texture.png-652a0218d0626a2c1325710f6636c56c.s3tc.ctex"]
+source_file="res://imports/DunCell_TexturesCom_Pavement_CobblestoneStreet5_2x2_1K_albedo.png"
+dest_files=["res://.godot/imported/DunCell_TexturesCom_Pavement_CobblestoneStreet5_2x2_1K_albedo.png-ee8625b55602bb995c1f0b1ce04d6e33.s3tc.ctex"]
 
 [params]
 

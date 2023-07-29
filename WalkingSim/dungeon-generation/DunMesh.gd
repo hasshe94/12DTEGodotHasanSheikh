@@ -8,7 +8,7 @@ extends Node3D
 func set_start(val:bool)->void:
 	if Engine.is_editor_hint():
 		create_dungeon()
-var dun_cell_scene : PackedScene = preload("res://dungeon-generation/dun_cell.tscn")
+var dun_cell_scene : PackedScene = preload("res://imports/DunCell.tscn")
 
 var directions : Dictionary = {
 	"up" : Vector3i.FORWARD,"down" : Vector3i.BACK,

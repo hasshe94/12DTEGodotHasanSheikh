@@ -46,6 +46,7 @@ albedo_texture = ExtResource("7_67gts")
 uv1_scale = Vector3(1.75, 1.75, 1.75)
 
 [node name="World1" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193086, -0.0119731, -0.00374722)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_p1vgl")
