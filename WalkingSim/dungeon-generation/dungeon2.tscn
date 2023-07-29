@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh58emgrdh7qa"]
+[gd_scene load_steps=5 format=3 uid="uid://dhg14j8x51gs1"]
 
-[ext_resource type="Script" path="res://dungeon-generation/dungeon.gd" id="1_frh23"]
-[ext_resource type="MeshLibrary" uid="uid://cufhkumjmk24i" path="res://dungeon-generation/dungeontiles.tres" id="2_4npvk"]
-[ext_resource type="Script" path="res://dungeon-generation/DunMesh.gd" id="3_5vvei"]
+[ext_resource type="Script" path="res://dungeon-generation/dungeon.gd" id="1_41upi"]
+[ext_resource type="MeshLibrary" uid="uid://cufhkumjmk24i" path="res://dungeon-generation/dungeontiles.tres" id="2_5stev"]
+[ext_resource type="Script" path="res://dungeon-generation/DunMesh.gd" id="3_2utqn"]
+[ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="4_fp5tj"]
 
 [node name="Dungeon" type="Node3D"]
-script = ExtResource("1_frh23")
+script = ExtResource("1_41upi")
 border_size = 26
 room_number = 7
 custom_seed = "Main"
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("2_4npvk")
+mesh_library = ExtResource("2_5stev")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 data = {
@@ -19,5 +20,8 @@ data = {
 }
 
 [node name="DunMesh" type="Node3D" parent="."]
-script = ExtResource("3_5vvei")
+script = ExtResource("3_2utqn")
 grid_map_path = NodePath("../GridMap")
+
+[node name="Player1" parent="." instance=ExtResource("4_fp5tj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.4796, -0.793965, 8.59571)

@@ -8,7 +8,7 @@ extends Node3D
 func set_start(val:bool)->void:
 	if Engine.is_editor_hint():
 		create_dungeon()
-var dun_cell_scene : PackedScene = preload("res://imports/DunCell.tscn")
+var dun_cell_scene : PackedScene = preload("res://dungeon-generation/dun_cell.tscn")
 
 var directions : Dictionary = {
 	"up" : Vector3i.FORWARD,"down" : Vector3i.BACK,
@@ -48,6 +48,7 @@ func create_dungeon():
 		remove_child(c)
 		c.queue_free()
 	var t : int = 0
+
 	for cell in grid_map.get_used_cells():
 		var cell_index : int = grid_map.get_cell_item(cell)
 		if cell_index <=2\

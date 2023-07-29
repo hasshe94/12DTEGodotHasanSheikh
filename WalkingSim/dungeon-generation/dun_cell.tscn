@@ -1,6 +1,140 @@
-[gd_scene load_steps=2 format=3 uid="uid://d22ggm8kupbws"]
+[gd_scene load_steps=26 format=3 uid="uid://d22ggm8kupbws"]
 
 [ext_resource type="Script" path="res://dungeon-generation/DunCell.gd" id="1_uuklk"]
+[ext_resource type="Texture2D" uid="uid://cgoirmgg0x3ci" path="res://Stones & Brick Textures/Stonewall_Texture.png" id="2_4u4e5"]
+[ext_resource type="Texture2D" uid="uid://n4pfrgf5v7ft" path="res://Stones & Brick Textures/Brickwall2_Texture.png" id="3_hefef"]
+[ext_resource type="Texture2D" uid="uid://cbd1xrmub2htj" path="res://Stones & Brick Textures/3D Retro Medieval Fantasy Kit/3D Retro Medieval Fantasy Kit/Textures/Wood-Dark.png" id="4_4c3la"]
+[ext_resource type="Texture2D" uid="uid://ca50hpecq8cmb" path="res://Stones & Brick Textures/Brickwall3_Texture.png" id="5_4nf1s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuwtu"]
+albedo_texture = ExtResource("2_4u4e5")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b7h5k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_naq01"]
+albedo_texture = ExtResource("3_hefef")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gteqg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6jgr"]
+albedo_texture = ExtResource("4_4c3la")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wwtt4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_is0me"]
+albedo_texture = ExtResource("3_hefef")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ejll2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c2ff"]
+albedo_texture = ExtResource("4_4c3la")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_awpqm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ma288"]
+albedo_texture = ExtResource("3_hefef")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d5d62"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_snw3l"]
+albedo_texture = ExtResource("4_4c3la")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yeg3y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkgca"]
+albedo_texture = ExtResource("3_hefef")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0m6b6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ywdv"]
+albedo_texture = ExtResource("4_4c3la")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tcwk6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y384n"]
+albedo_texture = ExtResource("5_4nf1s")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wn8rc"]
 
 [node name="DunCell" type="Node3D"]
 script = ExtResource("1_uuklk")
+
+[node name="floor" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_kuwtu")
+mesh = SubResource("ArrayMesh_b7h5k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
+
+[node name="wall_up" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_naq01")
+mesh = SubResource("ArrayMesh_gteqg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_up"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_up/StaticBody3D"]
+
+[node name="door_up" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_k6jgr")
+mesh = SubResource("ArrayMesh_wwtt4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_up"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_up/StaticBody3D"]
+
+[node name="wall_left" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_is0me")
+mesh = SubResource("ArrayMesh_ejll2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_left"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_left/StaticBody3D"]
+
+[node name="door_left" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_6c2ff")
+mesh = SubResource("ArrayMesh_awpqm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_left"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_left/StaticBody3D"]
+
+[node name="wall_down" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ma288")
+mesh = SubResource("ArrayMesh_d5d62")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_down"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_down/StaticBody3D"]
+
+[node name="door_down" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_snw3l")
+mesh = SubResource("ArrayMesh_yeg3y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_down"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_down/StaticBody3D"]
+
+[node name="wall_right" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_jkgca")
+mesh = SubResource("ArrayMesh_0m6b6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_right"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_right/StaticBody3D"]
+
+[node name="door_right" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_1ywdv")
+mesh = SubResource("ArrayMesh_tcwk6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_right"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_right/StaticBody3D"]
+
+[node name="ceiling" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_y384n")
+mesh = SubResource("ArrayMesh_wn8rc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceiling"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling/StaticBody3D"]
