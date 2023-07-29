@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=17 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="PackedScene" uid="uid://dlywqshtb2a61" path="res://leveltest1.tscn" id="1_55p5w"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
 [ext_resource type="Texture2D" uid="uid://n4pfrgf5v7ft" path="res://Stones & Brick Textures/Brickwall2_Texture.png" id="2_8okmw"]
 [ext_resource type="PackedScene" uid="uid://d02oow6saxkue" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe Valve.blend" id="5_cljd7"]
 [ext_resource type="PackedScene" uid="uid://1815g2un3sit" path="res://pickup.tscn" id="7_6pqgx"]
+[ext_resource type="PackedScene" uid="uid://dhg14j8x51gs1" path="res://dungeon-generation/dungeon2.tscn" id="7_61aql"]
 [ext_resource type="Texture2D" uid="uid://dkctif8h4ky8u" path="res://Stones & Brick Textures/3D Retro Plumbing & Wiring/Pipe-Texture.png" id="7_67gts"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xo5ff"]
@@ -23,7 +24,7 @@ ambient_light_energy = 0.0
 tonemap_mode = 2
 glow_enabled = true
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0159
+volumetric_fog_density = 0.0264
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76q2r"]
 albedo_texture = ExtResource("2_8okmw")
@@ -45,6 +46,9 @@ albedo_texture = ExtResource("7_67gts")
 albedo_texture = ExtResource("7_67gts")
 uv1_scale = Vector3(1.75, 1.75, 1.75)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ssaui"]
+size = Vector3(27.1509, 0.001, 43.5029)
+
 [node name="World1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193086, -0.0119731, -0.00374722)
 
@@ -65,7 +69,7 @@ transform = Transform3D(2.93136, 0, 0, 0, -2.9119, -0.0952831, 0, 0.0979714, -2.
 material_override = SubResource("StandardMaterial3D_badg7")
 
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]
-transform = Transform3D(0.0217399, 0, -0.499527, 0, 0.5, 0, 0.499527, 0, 0.0217399, 0.168525, 0.67968, 1.43886)
+transform = Transform3D(0.0217399, 0, -0.499527, 0, 0.5, 0, 0.499527, 0, 0.0217399, -0.125071, 1.04586, -16.9536)
 FRICTION = 0.05
 
 [node name="Pipe Valve" parent="." instance=ExtResource("5_cljd7")]
@@ -84,5 +88,22 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1pp8f")
 [node name="Pickup" parent="." instance=ExtResource("7_6pqgx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
 
+[node name="Dungeon" parent="." instance=ExtResource("7_61aql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7574, 0.7844, 5.91631)
+
+[node name="GridMap" parent="Dungeon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930901, 0, -0.17617)
+
+[node name="DunMesh" parent="Dungeon" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053587, -1.13458, -44.3756)
+
+[node name="Area3D" type="Area3D" parent="Dungeon/DunMesh" index="263"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0053587, 1.13458, 0.0800877)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dungeon/DunMesh/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8752, -0.224826, 9.37651)
+shape = SubResource("BoxShape3D_ssaui")
+
 [editable path="dungeon"]
 [editable path="Pipe Valve"]
+[editable path="Dungeon"]

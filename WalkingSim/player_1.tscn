@@ -56,6 +56,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0, 0.14902, 1)
 text = "Press E to collect
 "
 
@@ -67,4 +68,5 @@ offset_bottom = 40.0
 
 [node name="CollectionTracker" type="Label" parent="Control/MarginContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.105882, 0.376471, 1)
 text = "Pages: 0/10"
