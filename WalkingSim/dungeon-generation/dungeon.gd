@@ -5,6 +5,8 @@ extends Node3D
 
 @export var start : bool = false : set = set_start
 
+func _ready():
+	$DunMesh.create_dungeon()
 
 func set_start(val:bool)->void:
 	if Engine.is_editor_hint():

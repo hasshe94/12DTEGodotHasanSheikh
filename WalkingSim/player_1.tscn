@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_6eyeo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cy26o"]
-height = 3.20791
+height = 12.1942
 
 [node name="Player1" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0021317, -0.00267661, 0.00235987)
@@ -14,13 +14,13 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.481014, 0)
 shape = SubResource("CapsuleShape3D_cy26o")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.837518, 0.00719792)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.71494, 0.00719792)
 fov = 37.7
 near = 0.001
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00716712)
-light_energy = 3.1
+light_energy = 7.464
 light_indirect_energy = 3.586
 light_volumetric_fog_energy = 3.778
 shadow_enabled = true
@@ -70,3 +70,9 @@ offset_bottom = 40.0
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.105882, 0.376471, 1)
 text = "Pages: 0/10"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
