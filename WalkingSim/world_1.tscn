@@ -1,29 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=7 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
 [ext_resource type="PackedScene" uid="uid://1815g2un3sit" path="res://pickup.tscn" id="7_6pqgx"]
 [ext_resource type="PackedScene" uid="uid://dhg14j8x51gs1" path="res://dungeon-generation/dungeon2.tscn" id="7_61aql"]
 
-[sub_resource type="Environment" id="Environment_7kafq"]
-ambient_light_energy = 0.0
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0184
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0l2p3"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_energy_multiplier = 0.0
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_mxpf2"]
+[sub_resource type="Sky" id="Sky_vjcmq"]
+sky_material = SubResource("ProceduralSkyMaterial_0l2p3")
+
+[sub_resource type="Environment" id="Environment_l86cj"]
+background_mode = 1
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_vjcmq")
+ambient_light_source = 2
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0324
 
 [node name="World1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193086, -0.0119731, -0.00374722)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_7kafq")
-camera_attributes = SubResource("CameraAttributesPhysical_mxpf2")
+environment = SubResource("Environment_l86cj")
 
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]
-transform = Transform3D(0.0217399, 0, -0.499527, 0, 0.5, 0, 0.499527, 0, 0.0217399, 0.932107, 1.04586, -12.4783)
+transform = Transform3D(-0.499527, 0, -0.0217399, 0, 0.5, 0, 0.0217399, 0, -0.499527, 2.93211, 1.04586, -12.4783)
 FRICTION = 0.05
 
 [node name="Pickup" parent="." instance=ExtResource("7_6pqgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+transform = Transform3D(0.999744, -0.0212114, 0.00781889, 0.0212169, 0.999775, -0.000621039, -0.00780396, 0.000786773, 0.999969, 2, 1, 0)
 
 [node name="Dungeon" parent="." instance=ExtResource("7_61aql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7574, 0.7844, 5.91631)
@@ -33,6 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930901, 0, 12.3744)
 visible = false
 
 [node name="DunMesh" parent="Dungeon" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053587, -1.13458, -22.0916)
+transform = Transform3D(0.999992, 0.00371617, -0.00121, -0.00371349, 0.999991, 0.00220351, 0.0012182, -0.00219899, 0.999997, -0.0053587, -1.13458, -22.0916)
 
 [editable path="Dungeon"]

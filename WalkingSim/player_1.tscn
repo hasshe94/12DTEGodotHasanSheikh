@@ -15,17 +15,17 @@ shape = SubResource("CapsuleShape3D_cy26o")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.71494, 0.00719792)
-fov = 37.7
+fov = 59.4009
 near = 0.001
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00716712)
-light_energy = 7.464
+light_energy = 9.219
 light_indirect_energy = 3.586
-light_volumetric_fog_energy = 3.778
+light_volumetric_fog_energy = 0.707
 shadow_enabled = true
-spot_range = 2.71652
-spot_angle = 10.8719
+spot_range = 4.18906
+spot_angle = 17.3079
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011289, 0)
