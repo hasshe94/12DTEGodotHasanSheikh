@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf64q32r2a0tg"]
+[gd_scene load_steps=4 format=3 uid="uid://cf64q32r2a0tg"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_6eyeo"]
+[ext_resource type="PackedScene" uid="uid://bdo48hr8oiemf" path="res://Low_Poly_Flashlight_v01/Mesh/flashLight.fbx" id="2_y2n4e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cy26o"]
 height = 12.1942
@@ -15,23 +16,26 @@ shape = SubResource("CapsuleShape3D_cy26o")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.71494, 0.00719792)
-fov = 59.4009
+fov = 60.1
 near = 0.001
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00716712)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944912, -0.482063, -0.585219)
 light_energy = 9.219
 light_indirect_energy = 3.586
 light_volumetric_fog_energy = 0.707
 shadow_enabled = true
 spot_range = 4.18906
-spot_angle = 17.3079
+spot_angle = 40.7813
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011289, 0)
 target_position = Vector3(0, 0, -1.5)
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="flashLight" parent="Camera3D" instance=ExtResource("2_y2n4e")]
+transform = Transform3D(-0.00132368, 0, 0.0499825, 0, 0.05, 0, -0.0499825, 0, -0.00132368, 0.0931818, -0.463256, -0.541634)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

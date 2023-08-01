@@ -18,10 +18,6 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
-[filesystem]
-
-import/fbx/enabled=false
-
 [input]
 
 ui_a={
