@@ -19,9 +19,14 @@ sky = SubResource("Sky_vjcmq")
 ambient_light_source = 2
 ambient_light_energy = 0.0
 tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0324
+adjustment_enabled = true
 
 [node name="World1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193086, -0.0119731, -0.00374722)
