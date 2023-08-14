@@ -39,7 +39,7 @@ script = ExtResource("1_4cxlv")
 environment = SubResource("Environment_l86cj")
 
 [node name="Player1" parent="." instance=ExtResource("2_3tynf")]
-transform = Transform3D(-0.340373, 0, -0.366259, 0, 0.5, 0, 0.366259, 0, -0.340373, -4.50213, 0.440801, -15.796)
+transform = Transform3D(-0.340373, 0, -0.366259, 0, 0.5, 0, 0.366259, 0, -0.340373, -4.07712, 0.440801, -15.796)
 FRICTION = 0.05
 
 [node name="Pickup" parent="." instance=ExtResource("7_6pqgx")]
