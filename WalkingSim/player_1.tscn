@@ -65,12 +65,12 @@ near = 0.001
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944912, -0.00153941, 0.0378509)
-light_energy = 2.431
+light_energy = 4.047
 light_indirect_energy = 3.586
 light_volumetric_fog_energy = 0.707
 shadow_enabled = true
 spot_range = 4.18906
-spot_angle = 40.7813
+spot_angle = 40.9787
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011289, 0)

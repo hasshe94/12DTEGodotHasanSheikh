@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnmkaiitt4631"]
+[gd_scene load_steps=3 format=3 uid="uid://cnmkaiitt4631"]
 
 [ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="1_5hlbp"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_l47x4"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -8,6 +9,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l47x4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.0784314, 0.0235294, 0.0235294, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
@@ -20,7 +26,16 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
-text = "Title Text"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
+theme_override_font_sizes/font_size = 24
+text = "The Dungeon
+"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -34,15 +49,27 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="selector_one" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 3
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
 text = ">"
 
-[node name="Start" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/shadow_offset_x = -7
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("1_5hlbp")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 18
 text = "Start"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -57,12 +84,27 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="selector_two" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 3
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
 text = ">"
 
-[node name="Options" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
+theme_override_font_sizes/font_size = 18
 text = "Options"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -77,11 +119,25 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="selector_three" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 3
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
 text = ">"
 
-[node name="Exit" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-text = "Exit
-"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_5hlbp")
+theme_override_font_sizes/font_size = 18
+text = "Exit"
