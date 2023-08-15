@@ -23,10 +23,10 @@ func _process(_delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_tree().change_scene_to(first_scene)
+		get_tree().change_scene_to_file("res://world_1.tscn")
 		queue_free()
 	elif _current_selection == 1:
-		get_tree().change_scene("")
+		print("Add Options")
 	elif _current_selection == 2:
 		get_tree().quit()
 
