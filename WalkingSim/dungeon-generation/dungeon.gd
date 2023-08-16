@@ -49,7 +49,7 @@ func generate():
 	for i in room_number:
 		t+=1
 		make_room(room_recursion)
-		if t%17 == 16: await get_tree().create_timer(0).timeout
+		#if t%17 == 16: await get_tree().create_timer(0).timeout
 	
 	var rpv2 : PackedVector2Array = []
 	var del_graph : AStar2D = AStar2D.new()
@@ -142,7 +142,7 @@ func create_hallways(hallway_graph:AStar2D):
 			var pos : Vector3i = Vector3i(t.x,0,t.y)
 			if grid_map.get_cell_item(pos) <0:
 				grid_map.set_cell_item(pos,1)
-		if _t%16 == 15: await  get_tree().create_timer(0).timeout
+		#if _t%16 == 15: await  get_tree().create_timer(0).timeout
 	
 	
 	

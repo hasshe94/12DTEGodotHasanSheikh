@@ -66,4 +66,4 @@ func create_dungeon():
 				else:
 					var key : String = str(cell_index) + str(cell_n_index)
 					call("handle_"+key,dun_cell,directions.keys()[i])
-		if t%10 == 9 : await get_tree().create_timer(0).timeout
+		#if t%10 == 9 : await get_tree().create_timer(0).timeout
