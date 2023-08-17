@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=12 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="Script" path="res://world_1.gd" id="1_4cxlv"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://player_1.tscn" id="2_3tynf"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://AudioStreamPlayer.gd" id="6_fj0kn"]
 [ext_resource type="PackedScene" uid="uid://1815g2un3sit" path="res://pickup.tscn" id="7_6pqgx"]
 [ext_resource type="PackedScene" uid="uid://dhg14j8x51gs1" path="res://dungeon-generation/dungeon2.tscn" id="7_61aql"]
+[ext_resource type="Script" path="res://pausemenu.gd" id="7_s4nl5"]
+[ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="8_7oi7f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0l2p3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -68,5 +70,73 @@ volume_db = -34.693
 autoplay = true
 mix_target = 1
 script = ExtResource("6_fj0kn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_s4nl5")
+
+[node name="pausemenu456" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/pausemenu456"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.133333)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/pausemenu456"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/pausemenu456/CenterContainer"]
+custom_minimum_size = Vector2(400, 180)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7oi7f")
+theme_override_font_sizes/font_size = 30
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7oi7f")
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+
+[node name="QuitButton2" type="Button" parent="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7oi7f")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[connection signal="pressed" from="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="CanvasLayer" method="_on_resume_button_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/pausemenu456/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton2" to="CanvasLayer" method="_on_quit_button_2_pressed" flags=18]
 
 [editable path="Dungeon"]
