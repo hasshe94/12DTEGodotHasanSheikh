@@ -1,6 +1,6 @@
 extends MarginContainer
 
-const first_scene = preload("res://world_1.tscn")
+const first_scene = preload("res://Scenes/world_1.tscn")
 
 @onready var selector_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/selector_one
 @onready var selector_two = $CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer/selector_two
@@ -23,7 +23,7 @@ func _process(_delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_tree().change_scene_to_file("res://world_1.tscn")
+		get_tree().change_scene_to_file("res://Scenes/world_1.tscn")
 		queue_free()
 	elif _current_selection == 1:
 		print("Add Options")

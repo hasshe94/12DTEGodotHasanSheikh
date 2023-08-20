@@ -46,8 +46,11 @@ func check_ray_hit():
 			ray.get_collider().queue_free()
 			pages_collected += 1
 			collection_tracker.text = "Pages : " + str(pages_collected) + " /10"
+		if pages_collected = 1:
+			get_tree().change_scene_to_file("res://Scenes/world_1.tscn")
 	else:
 		interaction_notifier.visible = false
+
 
 func _physics_process(delta):
 	check_ray_hit()

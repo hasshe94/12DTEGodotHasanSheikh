@@ -43,6 +43,9 @@ environment = SubResource("Environment_l86cj")
 
 [node name="Player1" parent="." instance=ExtResource("2_4hjpc")]
 transform = Transform3D(-0.484319, 0, -0.124235, 0, 0.5, 0, 0.124235, 0, -0.484319, -7.18887, 0.440801, -48.4545)
+mouse_sensitivity = null
+run_speed = null
+walk_speed = null
 FRICTION = 0.05
 
 [node name="Dungeon" parent="." instance=ExtResource("3_0jnrd")]
