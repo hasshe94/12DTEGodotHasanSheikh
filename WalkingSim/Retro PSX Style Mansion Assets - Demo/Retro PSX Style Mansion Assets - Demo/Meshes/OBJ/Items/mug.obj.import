@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs7e1ntgp637"
+path="res://.godot/imported/mug.obj-6c05f1ed47c94af81ff975a4724a58fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mug.obj-6c05f1ed47c94af81ff975a4724a58fa.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Items/mug.obj"
+dest_files=["res://.godot/imported/mug.obj-6c05f1ed47c94af81ff975a4724a58fa.mesh", "res://.godot/imported/mug.obj-6c05f1ed47c94af81ff975a4724a58fa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

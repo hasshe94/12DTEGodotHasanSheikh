@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drtyr2foftrbt"
+path="res://.godot/imported/papers.obj-63edc875797e19526eda4765f0783bef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/papers.obj-63edc875797e19526eda4765f0783bef.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Items/papers.obj"
+dest_files=["res://.godot/imported/papers.obj-63edc875797e19526eda4765f0783bef.mesh", "res://.godot/imported/papers.obj-63edc875797e19526eda4765f0783bef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

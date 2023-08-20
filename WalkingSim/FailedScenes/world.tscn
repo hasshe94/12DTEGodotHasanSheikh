@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceo70ujei4jmu"]
+
+[ext_resource type="PackedScene" uid="uid://dw4nqpsokgkjb" path="res://Scenes/LevelTest.tscn" id="1_gj7xo"]
+[ext_resource type="PackedScene" uid="uid://isltg2xnvkbr" path="res://player.tscn" id="2_v25sk"]
+[ext_resource type="PackedScene" uid="uid://brjydsr1eavre" path="res://palmtree.dae" id="3_osv56"]
+
+[node name="World" type="Node3D"]
+
+[node name="GrassPlatform" parent="." instance=ExtResource("1_gj7xo")]
+
+[node name="Player" parent="." instance=ExtResource("2_v25sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 743.38, 347.143, 2.79719)
+
+[node name="palmtree" parent="." instance=ExtResource("3_osv56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 296.278, 322.089, 6.14516)

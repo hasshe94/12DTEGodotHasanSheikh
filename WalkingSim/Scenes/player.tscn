@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://isltg2xnvkbr"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_xu06r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_63th4"]
+radius = 0.019909
+height = 0.109531
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 7.07064, -10.3448, 0)
+script = ExtResource("1_xu06r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354416, 1.30815, 0.899968)
+shape = SubResource("CapsuleShape3D_63th4")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.34531, 1.3521, 0.907219)
+fov = 1.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mpvrichaoc6x"
+path="res://.godot/imported/banisterbase.obj-e06fd05085d1ff4d15e94ecc40d04ec9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/banisterbase.obj-e06fd05085d1ff4d15e94ecc40d04ec9.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Structure/banisterbase.obj"
+dest_files=["res://.godot/imported/banisterbase.obj-e06fd05085d1ff4d15e94ecc40d04ec9.mesh", "res://.godot/imported/banisterbase.obj-e06fd05085d1ff4d15e94ecc40d04ec9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

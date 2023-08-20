@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ciuaicdgsd30i"
+path="res://.godot/imported/candle0.obj-672d9ba74d61cb01bab9050a0856615c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candle0.obj-672d9ba74d61cb01bab9050a0856615c.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Items/candle0.obj"
+dest_files=["res://.godot/imported/candle0.obj-672d9ba74d61cb01bab9050a0856615c.mesh", "res://.godot/imported/candle0.obj-672d9ba74d61cb01bab9050a0856615c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

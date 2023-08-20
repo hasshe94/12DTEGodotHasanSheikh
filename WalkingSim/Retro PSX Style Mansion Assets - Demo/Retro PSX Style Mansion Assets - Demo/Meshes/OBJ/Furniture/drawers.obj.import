@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bifeas7ad275k"
+path="res://.godot/imported/drawers.obj-289d55fca5a02edd7ee95c4e9539dca0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/drawers.obj-289d55fca5a02edd7ee95c4e9539dca0.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Furniture/drawers.obj"
+dest_files=["res://.godot/imported/drawers.obj-289d55fca5a02edd7ee95c4e9539dca0.mesh", "res://.godot/imported/drawers.obj-289d55fca5a02edd7ee95c4e9539dca0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

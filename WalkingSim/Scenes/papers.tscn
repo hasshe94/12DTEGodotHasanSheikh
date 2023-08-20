@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsxcx11cbcqlo"]
+
+[ext_resource type="PackedScene" uid="uid://dxi4o7giddhy6" path="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/DAE/Items/papers.dae" id="1_i51sb"]
+[ext_resource type="Texture2D" uid="uid://cm75g02q7sjx8" path="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Textures/papers_texture.png" id="2_omdk0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywjm3"]
+transparency = 1
+albedo_texture = ExtResource("2_omdk0")
+uv1_scale = Vector3(0.29, 0.29, 0.29)
+uv2_scale = Vector3(1, 0, 0)
+
+[node name="papers" groups=["Pickup"] instance=ExtResource("1_i51sb")]
+
+[node name="papers" parent="." index="0" groups=["Pickup"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.03757, 0.101737, -0.205498, 0.0729671)
+surface_material_override/0 = SubResource("StandardMaterial3D_ywjm3")

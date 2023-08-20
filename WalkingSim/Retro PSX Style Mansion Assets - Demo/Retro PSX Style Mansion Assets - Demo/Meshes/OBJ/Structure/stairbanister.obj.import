@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csk26cxuihurv"
+path="res://.godot/imported/stairbanister.obj-7bd1cc7febd64a811eb1767768fb9853.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairbanister.obj-7bd1cc7febd64a811eb1767768fb9853.mesh"]
+
+source_file="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/OBJ/Structure/stairbanister.obj"
+dest_files=["res://.godot/imported/stairbanister.obj-7bd1cc7febd64a811eb1767768fb9853.mesh", "res://.godot/imported/stairbanister.obj-7bd1cc7febd64a811eb1767768fb9853.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

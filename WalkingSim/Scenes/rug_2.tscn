@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcs6bcg4j7fjg"]
+
+[ext_resource type="PackedScene" uid="uid://bf66qoc4kqlsg" path="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Meshes/DAE/Decor/rug2.dae" id="1_yocei"]
+[ext_resource type="Texture2D" uid="uid://dcs0v504hpmtj" path="res://Retro PSX Style Mansion Assets - Demo/Retro PSX Style Mansion Assets - Demo/Textures/rug2_texture.png" id="2_7khg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0oae"]
+transparency = 1
+albedo_texture = ExtResource("2_7khg2")
+
+[node name="rug2" instance=ExtResource("1_yocei")]
+
+[node name="rug2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_u0oae")
