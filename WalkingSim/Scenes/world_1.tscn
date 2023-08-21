@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://dungeon-generation/DunMesh.gd" id="5_fuvrq"]
 [ext_resource type="PackedScene" uid="uid://dcs6bcg4j7fjg" path="res://Scenes/rug_2.tscn" id="8_7styl"]
 [ext_resource type="PackedScene" uid="uid://djmejjd6rulr8" path="res://Scenes/paperpickup.tscn" id="9_cd4ba"]
-[ext_resource type="Script" path="res://Scenes/JumpScareTrigger.gd" id="10_834im"]
+[ext_resource type="Script" path="res://Scripts/JumpScareTrigger.gd" id="10_gvw05"]
 [ext_resource type="AudioStream" uid="uid://bv6qhdj5kvkxa" path="res://Assets/male-scream.wav" id="11_ud8pe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0l2p3"]
@@ -117,7 +117,7 @@ transform = Transform3D(0.00639246, 0.998511, 0.0192177, 0.355336, -0.0180109, 2
 
 [node name="JumpScareTrigger" type="Area3D" parent="."]
 transform = Transform3D(2.7664, 0, 0, 0, 1.05239, 0, 0, 0, 1, -2.41854, 1.11294, -41.5194)
-script = ExtResource("10_834im")
+script = ExtResource("10_gvw05")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="JumpScareTrigger"]
 shape = SubResource("BoxShape3D_llqff")

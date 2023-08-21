@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgby6svgb5i2e"]
 
-[ext_resource type="Script" path="res://end.gd" id="1_0pa6s"]
 [ext_resource type="Script" path="res://dungeon-generation/dungeon.gd" id="1_a1dr6"]
+[ext_resource type="Script" path="res://Scripts/end.gd" id="1_b75f6"]
 [ext_resource type="MeshLibrary" uid="uid://cufhkumjmk24i" path="res://dungeon-generation/dungeontiles.tres" id="2_ok43s"]
 [ext_resource type="Script" path="res://dungeon-generation/DunMesh.gd" id="3_blji6"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://Scenes/player_1.tscn" id="4_3gki5"]
@@ -12,7 +12,7 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.0605
 
 [node name="End" type="Node3D"]
-script = ExtResource("1_0pa6s")
+script = ExtResource("1_b75f6")
 
 [node name="Dungeon" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44852, 0, -0.156373)

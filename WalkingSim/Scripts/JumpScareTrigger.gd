@@ -23,9 +23,10 @@
 #		var epstein = jump_scare_entity.instantiate()
 #		epstein.global_position = $Marker3D.global_position
 #		get_parent().add_child(epstein)
+
 extends Area3D
 
-var jump_scare_entity = preload("res://epstein.tscn")
+var jump_scare_entity = preload("res://Scenes/epstein.tscn")
 var triggered = false
 
 var scream: AudioStreamPlayer3D
