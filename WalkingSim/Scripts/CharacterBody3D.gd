@@ -46,8 +46,8 @@ func check_ray_hit():
 			ray.get_collider().queue_free()
 			pages_collected += 1
 			collection_tracker.text = "Pages : " + str(pages_collected) + " /10"
-		if pages_collected = 1:
-			get_tree().change_scene_to_file("res://Scenes/world_1.tscn")
+		if pages_collected == 10:
+			get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 	else:
 		interaction_notifier.visible = false
 
@@ -83,3 +83,8 @@ func _physics_process(delta):
 
 func _on_timer_timeout():
 	set_physics_process(true)
+
+
+func _input(event):
+	if event.is_action_pressed("restart"):
+		get_tree().change_scene_to_file("res://Scenes/world_1.tscn")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8vfj5shfjfti"]
+
+[ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="1_653of"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_epwvy"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_epwvy")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.164706, 0.0980392, 0.0313726, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -51.0
+offset_right = 35.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_653of")
+theme_override_font_sizes/font_size = 30
+text = "Resume
+"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -98.0
+offset_right = 19.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_653of")
+theme_override_font_sizes/font_size = 20
+text = "Exit"
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
