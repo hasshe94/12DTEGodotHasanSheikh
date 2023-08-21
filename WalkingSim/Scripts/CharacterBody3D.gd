@@ -9,6 +9,8 @@ const JUMP_VELOCITY = 2
 
 var pages_collected = 0
 
+var collect_sound_effect: AudioStreamPlayer3D
+
 
 @onready var ray = $Camera3D/RayCast3D
 @onready var interaction_notifier = $Control/InteractionNotifier
@@ -22,6 +24,7 @@ var pages_collected = 0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	collect_sound_effect = $AudioStreamPlayer3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	set_physics_process(false)
 
@@ -43,6 +46,7 @@ func check_ray_hit():
 		if collider and ray.get_collider().is_in_group("Pickup"):
 			interaction_notifier.visible = true
 		if Input.is_action_just_pressed("use"):
+			collect_sound_effect.play()
 			ray.get_collider().queue_free()
 			pages_collected += 1
 			collection_tracker.text = "Pages : " + str(pages_collected) + " /10"

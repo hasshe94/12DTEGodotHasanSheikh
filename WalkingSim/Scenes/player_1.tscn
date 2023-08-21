@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf64q32r2a0tg"]
+[gd_scene load_steps=10 format=3 uid="uid://cf64q32r2a0tg"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_nypds"]
 [ext_resource type="Texture2D" uid="uid://dpauc4j5urjmf" path="res://Low_Poly_Flashlight_v01/Textures/flashlight_base_color.png" id="2_qf7jh"]
+[ext_resource type="AudioStream" uid="uid://4smuswjk0lva" path="res://Assets/pageturn-102978.mp3" id="3_r7weo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cy26o"]
 height = 12.1942
@@ -138,5 +139,8 @@ text = "Pages: 0/10"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.001
 autostart = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_r7weo")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

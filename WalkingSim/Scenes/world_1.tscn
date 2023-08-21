@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnonwjdtene32"]
+[gd_scene load_steps=11 format=3 uid="uid://cnonwjdtene32"]
 
 [ext_resource type="Script" path="res://Scripts/world_1.gd" id="1_fbdtb"]
 [ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://Scenes/player_1.tscn" id="2_4hjpc"]
-[ext_resource type="PackedScene" uid="uid://l3gbse2gvlt1" path="res://gui.tscn" id="2_s6q8j"]
 [ext_resource type="PackedScene" uid="uid://dhg14j8x51gs1" path="res://dungeon-generation/dungeon2.tscn" id="3_0jnrd"]
 [ext_resource type="AudioStream" uid="uid://dyrs4m3edlkr1" path="res://Assets/MysteriousSuspensefulMusic2018-11-03_-_Dark_Fog_-_David_Fesliyan.mp3" id="4_d55dv"]
 [ext_resource type="Script" path="res://Scripts/AudioStreamPlayer.gd" id="5_6j8g8"]
@@ -103,7 +102,5 @@ transform = Transform3D(0.00639246, 0.998511, 0.0192177, 0.355336, -0.0180109, 2
 
 [node name="Paperpickup10" parent="PaperPickups" instance=ExtResource("9_cd4ba")]
 transform = Transform3D(0.00639246, 0.998511, 0.0192177, 0.355336, -0.0180109, 2.70807e-10, 0.000329644, 0.0514911, -0.372668, 36.5115, 0.899746, -52.175)
-
-[node name="GUI" parent="." instance=ExtResource("2_s6q8j")]
 
 [editable path="Dungeon"]
