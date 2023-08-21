@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgby6svgb5i2e"]
+
+[ext_resource type="Script" path="res://end.gd" id="1_0pa6s"]
+[ext_resource type="Script" path="res://dungeon-generation/dungeon.gd" id="1_a1dr6"]
+[ext_resource type="MeshLibrary" uid="uid://cufhkumjmk24i" path="res://dungeon-generation/dungeontiles.tres" id="2_ok43s"]
+[ext_resource type="Script" path="res://dungeon-generation/DunMesh.gd" id="3_blji6"]
+[ext_resource type="PackedScene" uid="uid://cf64q32r2a0tg" path="res://Scenes/player_1.tscn" id="4_3gki5"]
+
+[sub_resource type="Environment" id="Environment_hgu0y"]
+ambient_light_energy = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0605
+
+[node name="End" type="Node3D"]
+script = ExtResource("1_0pa6s")
+
+[node name="Dungeon" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44852, 0, -0.156373)
+script = ExtResource("1_a1dr6")
+border_size = 11
+room_number = 3
+
+[node name="GridMap" type="GridMap" parent="Dungeon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.5772)
+mesh_library = ExtResource("2_ok43s")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 3, 65535, 11, 3, 11, 65535, 3, 0, 65535, 3, 0, 11, 3, 11, 0, 3, 65535, 0, 3, 1, 65535, 3, 1, 11, 3, 11, 1, 3, 65535, 1, 3, 2, 65535, 3, 2, 11, 3, 11, 2, 3, 65535, 2, 3, 3, 65535, 3, 3, 11, 3, 11, 3, 3, 65535, 3, 3, 4, 65535, 3, 4, 11, 3, 11, 4, 3, 65535, 4, 3, 5, 65535, 3, 5, 11, 3, 11, 5, 3, 65535, 5, 3, 6, 65535, 3, 6, 11, 3, 11, 6, 3, 65535, 6, 3, 7, 65535, 3, 7, 11, 3, 11, 7, 3, 65535, 7, 3, 8, 65535, 3, 8, 11, 3, 11, 8, 3, 65535, 8, 3, 9, 65535, 3, 9, 11, 3, 11, 9, 3, 65535, 9, 3, 10, 65535, 3, 10, 11, 3, 11, 10, 3, 65535, 10, 3, 11, 11, 3, 2, 5, 0, 3, 5, 0, 4, 5, 2, 2, 6, 0, 3, 6, 0, 4, 6, 2, 7, 0, 0, 8, 0, 0, 7, 1, 2, 8, 1, 0, 9, 8, 2, 10, 8, 0, 9, 9, 0, 10, 9, 0, 4, 4, 1, 4, 3, 1, 4, 2, 1, 4, 1, 1, 5, 1, 1, 6, 1, 1, 5, 6, 1, 6, 6, 1, 7, 6, 1, 8, 6, 1, 9, 6, 1, 9, 7, 1)
+}
+
+[node name="DunMesh" type="Node3D" parent="Dungeon"]
+script = ExtResource("3_blji6")
+grid_map_path = NodePath("../GridMap")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hgu0y")
+
+[node name="Player1" parent="." instance=ExtResource("4_3gki5")]
+transform = Transform3D(0.42901, 0, 0.256808, 0, 0.5, 0, -0.256808, 0, 0.42901, 9.10072, 1.17825, 8.75799)

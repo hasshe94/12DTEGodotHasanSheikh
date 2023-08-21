@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnmkaiitt4631"]
+[gd_scene load_steps=4 format=3 uid="uid://cnmkaiitt4631"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_3pxf0"]
 [ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="2_f8onk"]
+[ext_resource type="AudioStream" uid="uid://dm5q8bt2kljfs" path="res://Assets/2018-02-24_-_Monster_In_The_Field_-_David_Fesliyan.mp3" id="3_0708k"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -142,5 +143,7 @@ theme_override_fonts/font = ExtResource("2_f8onk")
 theme_override_font_sizes/font_size = 18
 text = "Exit"
 
-[node name="Options" type="Control" parent="."]
-layout_mode = 2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0708k")
+volume_db = -11.228
+autoplay = true
