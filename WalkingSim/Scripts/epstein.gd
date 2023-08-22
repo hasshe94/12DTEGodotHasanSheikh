@@ -1,6 +1,6 @@
-extends Sprite3D
+extends Node3D
 
-var move_speed = 1
+var move_speed = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

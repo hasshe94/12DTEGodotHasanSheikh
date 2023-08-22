@@ -47,6 +47,6 @@ func _on_body_entered(body):
 		if scream:
 			scream.play()  # Play the audio jumpscare
 			
-		var epstein = jump_scare_entity.instanciate()  # Use instance() instead of instantiate()
-		epstein.global_transform.origin = $Marker3D.global_transform.origin
+		var epstein = jump_scare_entity.instantiate()  # Use instance() instead of instantiate()
+		epstein.global_position = $Marker3D.global_position
 		get_parent().add_child(epstein)

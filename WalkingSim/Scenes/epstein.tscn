@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsouqt7pqvx87"]
+[gd_scene load_steps=3 format=3 uid="uid://etpyaxqqsd1q"]
 
-[ext_resource type="Texture2D" uid="uid://calb8baeaku13" path="res://Assets/PRO-bc77871de739454f9aa5823f51aed311.jpg" id="1_bjmal"]
-[ext_resource type="Script" path="res://epstein.gd" id="2_e7j6u"]
+[ext_resource type="Script" path="res://Scripts/epstein.gd" id="1_uir7g"]
+[ext_resource type="Texture2D" uid="uid://calb8baeaku13" path="res://Assets/epstein.jpg" id="2_477e8"]
 
-[node name="Epstein" type="Sprite3D"]
-transform = Transform3D(0.03, 0, 0, 0, 0.035, 0, 0, 0, 0.215, 0, 0, 0)
-texture = ExtResource("1_bjmal")
-script = ExtResource("2_e7j6u")
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_uir7g")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture = ExtResource("2_477e8")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.186
+wait_time = 3.437
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

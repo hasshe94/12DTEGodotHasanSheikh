@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="2_jebqk"]
 
 [node name="PauseMenu" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_bq3n2")
 
 [node name="ColorRect" type="ColorRect" parent="."]

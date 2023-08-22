@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://calb8baeaku13"
-path.s3tc="res://.godot/imported/PRO-bc77871de739454f9aa5823f51aed311.jpg-ea7268eed088ca1588fbda927f1b4fcd.s3tc.ctex"
+path.s3tc="res://.godot/imported/epstein.jpg-422711442d4a3daa2def2f2b9f415667.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/PRO-bc77871de739454f9aa5823f51aed311.jpg"
-dest_files=["res://.godot/imported/PRO-bc77871de739454f9aa5823f51aed311.jpg-ea7268eed088ca1588fbda927f1b4fcd.s3tc.ctex"]
+source_file="res://Assets/epstein.jpg"
+dest_files=["res://.godot/imported/epstein.jpg-422711442d4a3daa2def2f2b9f415667.s3tc.ctex"]
 
 [params]
 
