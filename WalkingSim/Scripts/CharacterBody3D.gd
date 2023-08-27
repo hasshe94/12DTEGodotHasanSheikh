@@ -49,8 +49,8 @@ func check_ray_hit():
 			collect_sound_effect.play()
 			ray.get_collider().queue_free()
 			pages_collected += 1
-			collection_tracker.text = "Pages : " + str(pages_collected) + " /10"
-		if pages_collected == 10:
+			collection_tracker.text = "Pages : " + str(pages_collected) + " /5"
+		if pages_collected == 5:
 			get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 	else:
 		interaction_notifier.visible = false
@@ -92,3 +92,6 @@ func _on_timer_timeout():
 func _input(event):
 	if event.is_action_pressed("restart"):
 		get_tree().change_scene_to_file("res://Scenes/world_1.tscn")
+	if event.is_action_pressed("menu"):
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+

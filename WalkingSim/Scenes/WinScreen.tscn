@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://68piufli2mgp"]
 
-[ext_resource type="Script" path="res://Scenes/WinScreen.gd" id="1_xq0fs"]
+[ext_resource type="Script" path="res://Scripts/WinScreen.gd" id="1_suj2h"]
 [ext_resource type="FontFile" uid="uid://b71whubc6hnpw" path="res://HelpMe_Font_1_00/HelpMe.otf" id="2_1y7gb"]
 [ext_resource type="AudioStream" uid="uid://dm5q8bt2kljfs" path="res://Assets/2018-02-24_-_Monster_In_The_Field_-_David_Fesliyan.mp3" id="3_n7hbr"]
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="WinScreen" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xq0fs")
+script = ExtResource("1_suj2h")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2

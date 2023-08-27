@@ -106,7 +106,7 @@ theme_override_constants/shadow_outline_size = 1
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("2_f8onk")
 theme_override_font_sizes/font_size = 18
-text = "Options"
+text = "About"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
