@@ -223,6 +223,20 @@ transform = Transform3D(-0.259309, -0.0117531, 0.0197409, -0.00305112, 0.999263,
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Jumpscares/JumpScareTrigger6"]
 stream = ExtResource("11_ud8pe")
 
+[node name="JumpScareTrigger12" type="Area3D" parent="Jumpscares"]
+transform = Transform3D(2.7664, 0, 0, 0, 1.05239, 0, 0, 0, 1, 10.6623, 1.11294, -18.6499)
+script = ExtResource("10_gvw05")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jumpscares/JumpScareTrigger12"]
+transform = Transform3D(1.69434, 0, 0, 0, 1, 0, 0, 0, 2.99195, 0, 0, 0)
+shape = SubResource("BoxShape3D_llqff")
+
+[node name="Marker3D" type="Marker3D" parent="Jumpscares/JumpScareTrigger12"]
+transform = Transform3D(-0.259309, -0.0117531, 0.0197409, -0.00305112, 0.999263, 0, -0.00511479, -0.000231826, -1.00082, 0.577832, 0, 1.97036)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Jumpscares/JumpScareTrigger12"]
+stream = ExtResource("11_ud8pe")
+
 [node name="JumpScareTrigger7" type="Area3D" parent="Jumpscares"]
 transform = Transform3D(2.7664, 0, 0, 0, 1.05239, 0, 0, 0, 1, 8.92639, 1.11294, 4.35313)
 script = ExtResource("10_gvw05")
@@ -312,6 +326,7 @@ stream = ExtResource("11_ud8pe")
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger5" to="Jumpscares/JumpScareTrigger5" method="_on_body_entered"]
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger10" to="Jumpscares/JumpScareTrigger10" method="_on_body_entered"]
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger6" to="Jumpscares/JumpScareTrigger6" method="_on_body_entered"]
+[connection signal="body_entered" from="Jumpscares/JumpScareTrigger12" to="Jumpscares/JumpScareTrigger12" method="_on_body_entered"]
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger7" to="Jumpscares/JumpScareTrigger7" method="_on_body_entered"]
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger11" to="Jumpscares/JumpScareTrigger11" method="_on_body_entered"]
 [connection signal="body_entered" from="Jumpscares/JumpScareTrigger8" to="Jumpscares/JumpScareTrigger8" method="_on_body_entered"]
