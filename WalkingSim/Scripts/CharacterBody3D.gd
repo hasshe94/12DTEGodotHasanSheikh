@@ -49,8 +49,8 @@ func check_ray_hit():
 			collect_sound_effect.play()
 			ray.get_collider().queue_free()
 			pages_collected += 1
-			collection_tracker.text = "Pages : " + str(pages_collected) + " /5"
-		if pages_collected == 5:
+			collection_tracker.text = "Pages : " + str(pages_collected) + " /6"
+		if pages_collected == 6:
 			get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 	else:
 		interaction_notifier.visible = false

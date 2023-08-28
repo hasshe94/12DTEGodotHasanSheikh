@@ -90,10 +90,10 @@ script = ExtResource("5_6j8g8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00311279, 9.53674e-05, 0.115484)
 
 [node name="Paperpickup" parent="PaperPickups" instance=ExtResource("9_cd4ba")]
-transform = Transform3D(-0.00640095, -0.999838, 0, 0.355336, -0.0180109, 0, 0, 0, 0.373163, -6.02402, 0.899746, -46.7884)
+transform = Transform3D(-0.00640095, -0.999838, 0, 0.355336, -0.0180109, 0, 0, 0, 0.373163, -8.05, 0.899746, -30.2232)
 
 [node name="Paperpickup2" parent="PaperPickups" instance=ExtResource("9_cd4ba")]
-transform = Transform3D(-0.00640095, -0.999838, 0, 0.355336, -0.0180109, 0, 0, 0, 0.373163, 18.9747, 0.899746, -44.9111)
+transform = Transform3D(-0.00640095, -0.999838, 0, 0.355336, -0.0180109, 0, 0, 0, 0.373163, 22.9786, 0.899746, -51.924)
 
 [node name="Paperpickup3" parent="PaperPickups" instance=ExtResource("9_cd4ba")]
 transform = Transform3D(0.00638892, 0.997959, -0.0228656, 0.355336, -0.0180109, 2.52029e-10, -0.000392219, -0.0612651, -0.372462, 24.4824, 0.899746, -34.8281)
